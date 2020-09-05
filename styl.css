@@ -1,0 +1,51 @@
+.man {
+    background: #20e2d2;
+    box-shadow: -15px 15px 15px rgba(255,255,255,0.2),
+                 -15px 15px 15px rgba(47, 43, 43, 0.637),
+                  inset -10px -10px 10px rgba(61, 39, 39, 0.2),
+                  inset 15px 15px 15px rgba(184, 5, 92, 0.74);
+
+    
+    width: 800px;
+    
+    height: 300px;
+    border-radius: 300px;
+}
+ .hading {
+   
+     height: 50px;
+     color: rgb(133, 54, 93);
+     text-shadow: 8px 5px 5px ;
+ }
+
+body {
+   background:  #b7d4d84d;
+   color: black;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   margin: top;
+   padding: 0;
+  
+}
+.stopwatch {
+   font-size: 10em;
+   font-family: monospace;
+   text-align:center;
+}
+.btn {
+    color: rgb(133, 54, 93);
+    box-shadow: inset  -10px 10px 20px; 
+background-color: rgb(41, 136, 224);
+    border-radius: 500px;
+    width: 80px;
+    margin-top: 4px;
+    height: 80px;
+    margin-left: 2px;
+    margin-right: 5rem;
+    float: right;
+    margin: 7;
+}
+}
+   

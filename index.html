@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styl.css">
+
+</head>
+<body>
+    <h1 class="hading"> <b> <i>STOP WATCH </i>  </b></h1>
+    <div class="controls">
+        <div class="man">
+        <div class="stopwatch">00:00:00</div>
+
+<button class="btn" onclick="restart()"> <b> RESTART </b></button>
+<button class="btn"  onclick="stop()"> <b> STOP </b></button>
+<button class="btn"  onclick="pause()"> <b> PAUSE </b></button>
+<button class="btn" onclick="start()" > <b> START </b></button>
+</div>
+
+<ul class="laps"></ul>
+</div>
+    <script type="text/javascript">
+
+var ms = 0, s = 0, m = 0;
+var timer;
+var stopwatchEl = document.querySelector('.stopwatch');
+var lapsContainer = document.querySelector('.lap');
+
+
+function start() {
+    if(!timer) {
+        timer = setInterval(run,10);
+    }
+    
+}
+function run() {
+    stopwatchEl.textContent = (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + (ms < 10 ? "0" + ms : ms);
+    ms++ 
+    if(ms == 100) {
+        ms = 0;
+        s++;
+    }
+    if(s == 60) {
+        s =0;
+        m++;
+    }
+}
+function pause() {
+    stoptimer();
+}
+function stop() {
+   stoptimer();
+    ms = 0;
+    s = 0;
+    m= 0;
+    stopwatchEl.textContent = (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + (ms < 10 ? "0" + ms : ms);
+} 
+function stoptimer() {
+    clearInterval(timer);
+    timer = false;
+}
+function getTimer() {
+return (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s) + ":" + (ms < 10 ? "0" + ms : ms);
+}
+
+function restart() {
+    stop();
+    start();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
